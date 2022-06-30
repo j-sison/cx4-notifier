@@ -53,6 +53,9 @@ public class DeployNotification
 
 	/**  */
 	private Properties prop;
+
+	/**  */
+	private String sleepTime;
 	//~ Methods ----------------------------------
 	/**
 	 * DOCUMENT ME!
@@ -70,6 +73,7 @@ public class DeployNotification
 		method = allParams.get("method");
 		bambooUser = allParams.get("user");
 		buildNum = allParams.get("buildNum");
+		sleepTime = allParams.get("sleepTime").replaceAll("[^0-9]", "");
 
 		formatUserString();
 
@@ -87,7 +91,7 @@ public class DeployNotification
 			assignMessageSetFrom(message);
 			assignMessageRecipient(message);
 			assignMessageHeader(message);
-			setMessageText(method, message);
+			setMessageText(method, sleepTime, message);
 
 			Transport.send(message);
 		}
@@ -331,13 +335,13 @@ public class DeployNotification
 	 * @param   message
 	 * @throws  MessagingException
 	 */
-	private void setMessageText(String method, MimeMessage message) throws MessagingException
+	private void setMessageText(String method, String sleepTime, MimeMessage message) throws MessagingException
 	{
 		String msg = "";
 		String stopLink = "";
 		if (method.equals("deploy"))
 		{
-			msg = "I will deploy CX4 IE in 2 minutes.<br>"
+			msg = "I will deploy CX4 IE in " + sleepTime + " minutes.<br>"
 				+ "Let me know if I should wait. :) <br>";
 			stopLink =
 				"<a href=http://cs-v-cspcxdev-03.champ.aero:8080/cx4-emailer-0.0.2-SNAPSHOT/cancelNotify?method=deploy&"
@@ -357,7 +361,7 @@ public class DeployNotification
 		}
 		else if (method.equals("restart"))
 		{
-			msg = "I will restart CX4 IE in 2 minutes.<br>"
+			msg = "I will restart CX4 IE in " + sleepTime + " minutes.<br>"
 				+ "Let me know if I should wait. :) <br>";
 			stopLink =
 				"<a href=http://cs-v-cspcxdev-03.champ.aero:8080/cx4-emailer-0.0.2-SNAPSHOT/cancelNotify?method=restart&"
