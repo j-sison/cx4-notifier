@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.jay.cx4emailer.Cx4EmailerApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.141 s - in com.jay.cx4emailer.Cx4EmailerApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.883 s - in com.jay.cx4emailer.Cx4EmailerApplicationTests

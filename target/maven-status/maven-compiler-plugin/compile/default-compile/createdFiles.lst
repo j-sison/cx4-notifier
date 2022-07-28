@@ -1,4 +1,8 @@
 com\jay\cx4emailer\DeployNotification$1.class
-com\jay\cx4emailer\DeployNotification$2.class
-com\jay\cx4emailer\Cx4EmailerApplication.class
+com\jay\util\MessageHandler.class
 com\jay\cx4emailer\DeployNotification.class
+com\jay\cx4emailer\config\UrlConfig.class
+com\jay\cx4emailer\Cx4EmailerApplication.class
+com\jay\cx4emailer\config\MessageConfig.class
+com\jay\cx4emailer\config\RecipientConfig.class
+com\jay\cx4emailer\config\UserConfig.class

@@ -1,0 +1,38 @@
+# Use three(3) white spaces, tab indentations are not allowed
+users:
+   sisja: "jaypee.sison@champ.aero"
+   gonry: "Ryan.Gonzales@champ.aero"
+   vilda: "DanAngelo.Villapando@champ.aero"
+   enrch: "ChristopherOliver.ENRIQUEZ@champ.aero"
+   carfr: "FrancisJulian.CAROLINO@champ.aero"
+   mabch: "Chichie.Mabutas@champ.aero"
+   araet: "EthelJean.Aramburo@champ.aero"
+   samti: "TimothyPierce.SAMONTINA@champ.aero"
+   janca: "Carolyn.Janaban@champ.aero"
+   cspsupport: "devcspsupport@champ.aero"
+   default: "sisja@champ.aero"
+   
+urls:
+   bambooUrl: "http://bamboo.champ.aero:8085/browse/CSPTOOLS-CX4IE"
+   stopRedirectUrl: "http://bamboo.champ.aero:8085/build/admin/stopPlan.action?planResultKey=CSPTOOLS-CX4IE-{}&returnUrl=%2Fbrowse%2FCSPTOOLS-CX4IE-{}"
+   restartStopUrl: "http://cs-v-cspcxdev-03.champ.aero:8080/cx4-emailer-0.0.2-SNAPSHOT/cancelNotify?method=restart&user={}&buildNum={}"
+   deployStopUrl: "http://cs-v-cspcxdev-03.champ.aero:8080/cx4-emailer-0.0.2-SNAPSHOT/cancelNotify?method=deploy&user={}&buildNum={}"
+   
+messages:
+   restartMsg: "I will restart CX4 IE in {}.<br> Let me know if I should wait. :) <br>"
+   deployMsg: "I will deploy CX4 IE in {}.<br> Let me know if I should wait. :) <br>"
+   restartDoneMsg: "Restart done via <a href={}>{}</a><br> Thank you. :)"
+   deployDoneMsg: "Deploy done via <a href={}>{}</a><br> Thank you. :)"
+   restartStopMsg: "<a href={}>If you wish to stop the restart, click here<br>"
+   deployStopMsg: "<a href={}>If you wish to stop the deployment, click here<br>"
+   restartStopDoneMsg: "The restart has been stopped. \r\n"
+   deployStopDoneMsg: "The deployment has been stopped. \r\n"
+   restartStopNotDoneMsg: "Cannot stop the restart. \r\n Time limit for waiting time has been reached!\r\n"
+   deployStopNotDoneMsg: "Cannot stop the deployment. \r\n Time limit for waiting time has been reached!\r\n"
+   restartSubjectMsg: "CX4 IE Restart"
+   deploySubjectMsg: "CX4 IE Deployment"
+   
+recipients:
+   sisja: "jaypee.sison@champ.aero"
+   cx4GeneralChat: "f2139f7c.champcargosystems.onmicrosoft.com@emea.teams.ms"
+    

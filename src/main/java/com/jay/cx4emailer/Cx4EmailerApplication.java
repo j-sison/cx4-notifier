@@ -14,7 +14,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 public class Cx4EmailerApplication extends SpringBootServletInitializer
 {
 	//~ Methods ----------------------------------
-
 	/**
 	 * DOCUMENT ME!
 	 *

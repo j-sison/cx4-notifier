@@ -1,2 +1,8 @@
-D:\cargospot-maven\projects-git\cx4-emailer\src\main\java\com\jay\cx4emailer\Cx4EmailerApplication.java
-D:\cargospot-maven\projects-git\cx4-emailer\src\main\java\com\jay\cx4emailer\DeployNotification.java
+D:\cargospot-maven\projects-svn\cx4-notifier\src\main\java\com\jay\cx4emailer\config\UserConfig.java
+D:\cargospot-maven\projects-svn\cx4-notifier\src\main\java\com\jay\cx4emailer\DeployNotification.java
+D:\cargospot-maven\projects-svn\cx4-notifier\src\main\java\com\jay\util\MessageHandler.java
+D:\cargospot-maven\projects-svn\cx4-notifier\src\main\java\com\jay\cx4emailer\config\MessageConfig.java
+D:\cargospot-maven\projects-svn\cx4-notifier\src\main\java\com\jay\cx4emailer\config\UrlConfig.java
+D:\cargospot-maven\projects-svn\cx4-notifier\src\main\java\com\jay\cx4emailer\Const.java
+D:\cargospot-maven\projects-svn\cx4-notifier\src\main\java\com\jay\cx4emailer\Cx4EmailerApplication.java
+D:\cargospot-maven\projects-svn\cx4-notifier\src\main\java\com\jay\cx4emailer\config\RecipientConfig.java
