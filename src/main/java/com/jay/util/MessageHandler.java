@@ -95,8 +95,8 @@ public final class MessageHandler
 	 */
 	public static long convertTimeToMilliseconds(String time)
 	{
-		String timeUnit = time.substring(time.length() - 1);
-		String extractedTime = time.replaceAll(timeUnit, "");
+		String timeUnit = getTimeUnit(time);
+		String extractedTime = extractTime(time);
 		Long seconds = 0L;
 
 		if ("s".equals(timeUnit))
@@ -113,5 +113,50 @@ public final class MessageHandler
 		}
 
 		return seconds;
+	}
+	
+	/**
+	 * DOCUMENT ME!
+	 *
+	 * @param   time
+	 * @return
+	 */
+	private static String getTimeUnit(String time)
+	{
+		return time.substring(time.length() - 1);
+	}
+	
+	/**
+	 * DOCUMENT ME!
+	 *
+	 * @param   time
+	 * @return
+	 */
+	private static String extractTime(String time)
+	{
+		return time.replaceAll(getTimeUnit(time), "");
+	}
+	
+	/**
+	 * DOCUMENT ME!
+	 *
+	 * @param   time
+	 * @return
+	 */
+	public static String getTimeMsg(String time)
+	{
+		String extractedTime = extractTime(time);
+		String timeMsg = "";
+
+		if ("1".equals(extractedTime))
+		{
+			timeMsg = extractedTime + ("s".equals(getTimeUnit(time)) ? " second" : " minute");
+		}
+		else
+		{
+			timeMsg = extractedTime + ("s".equals(getTimeUnit(time)) ? " seconds" : " minutes");
+		}
+
+		return timeMsg;
 	}
 }

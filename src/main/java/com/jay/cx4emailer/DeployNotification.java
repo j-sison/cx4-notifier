@@ -5,6 +5,7 @@ import static com.jay.util.MessageHandler.generateDoneMsg;
 import static com.jay.util.MessageHandler.generateSleepMsg;
 import static com.jay.util.MessageHandler.generateStopRedirectUrl;
 import static com.jay.util.MessageHandler.generateStopUrl;
+import static com.jay.util.MessageHandler.getTimeMsg;
 
 import com.jay.cx4emailer.config.MessageConfig;
 import com.jay.cx4emailer.config.RecipientConfig;
@@ -337,7 +338,7 @@ public class DeployNotification
 		{
 			timer = new Timer();
 			timer.schedule(new DisableBuildStop(), convertTimeToMilliseconds(sleepTime));
-			msg = generateSleepMsg(msgConfig.getMsg(Const.DEPLOY_MSG), sleepTime);
+			msg = generateSleepMsg(msgConfig.getMsg(Const.DEPLOY_MSG), getTimeMsg(sleepTime));
 			stopUrl = generateStopUrl(msgConfig.getMsg(Const.DEPLOY_STOP_MSG),
 					urlConfig.getUrl(Const.DEPLOY_STOP_URL),
 					bambooUser, buildNum);
@@ -355,7 +356,7 @@ public class DeployNotification
 		{
 			timer = new Timer();
 			timer.schedule(new DisableBuildStop(), convertTimeToMilliseconds(sleepTime));
-			msg = generateSleepMsg(msgConfig.getMsg(Const.RESTART_MSG), sleepTime);
+			msg = generateSleepMsg(msgConfig.getMsg(Const.RESTART_MSG), getTimeMsg(sleepTime));
 			stopUrl = generateStopUrl(msgConfig.getMsg(Const.RESTART_STOP_MSG),
 					urlConfig.getUrl(Const.RESTART_STOP_URL),
 					bambooUser, buildNum);
