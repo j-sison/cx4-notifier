@@ -19,8 +19,8 @@ urls:
    deployStopUrl: "http://cs-v-cspcxdev-03.champ.aero:8080/cx4-emailer-0.0.2-SNAPSHOT/cancelNotify?method=deploy&user={}&buildNum={}"
    
 messages:
-   restartMsg: "I will restart CX4 IE in {}.<br> Let me know if I should wait. :) <br>"
-   deployMsg: "I will deploy CX4 IE in {}.<br> Let me know if I should wait. :) <br>"
+   restartMsg: "I will restart ${team} IE in {}.<br> Let me know if I should wait. :) <br>"
+   deployMsg: "I will deploy ${team} IE in {}.<br> Let me know if I should wait. :) <br>"
    restartDoneMsg: "Restart done via <a href={}>{}</a><br> Thank you. :)"
    deployDoneMsg: "Deploy done via <a href={}>{}</a><br> Thank you. :)"
    restartStopMsg: "<a href={}>If you wish to stop the restart, click here<br>"
@@ -29,10 +29,12 @@ messages:
    deployStopDoneMsg: "The deployment has been stopped. \r\n"
    restartStopNotDoneMsg: "Cannot stop the restart. \r\n Time limit for waiting time has been reached!\r\n"
    deployStopNotDoneMsg: "Cannot stop the deployment. \r\n Time limit for waiting time has been reached!\r\n"
-   restartSubjectMsg: "CX4 IE Restart"
-   deploySubjectMsg: "CX4 IE Deployment"
+   restartSubjectMsg: "${team} IE Restart"
+   deploySubjectMsg: "${team} IE Deployment"
    
 recipients:
    sisja: "jaypee.sison@champ.aero"
-   cx4GeneralChat: "f2139f7c.champcargosystems.onmicrosoft.com@emea.teams.ms"
+   cx4GeneralChat: "c45a90b7.champcargosystems.onmicrosoft.com@emea.teams.ms"
+   
+team: "CX4"
     
