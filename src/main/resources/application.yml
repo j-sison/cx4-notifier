@@ -14,9 +14,12 @@ users:
    
 urls:
    bambooUrl: "http://bamboo.champ.aero:8085/browse/CSPTOOLS-CX4IE"
-   stopRedirectUrl: "http://bamboo.champ.aero:8085/build/admin/stopPlan.action?planResultKey=CSPTOOLS-CX4IE-{}&returnUrl=%2Fbrowse%2FCSPTOOLS-CX4IE-{}"
-   restartStopUrl: "http://cs-v-cspcxdev-03.champ.aero:8080/cx4-emailer-0.0.2-SNAPSHOT/cancelNotify?method=restart&user={}&buildNum={}"
-   deployStopUrl: "http://cs-v-cspcxdev-03.champ.aero:8080/cx4-emailer-0.0.2-SNAPSHOT/cancelNotify?method=deploy&user={}&buildNum={}"
+   stopRedirectUrl: "http://bamboo.champ.aero:8085/build/admin/stopPlan.action?planResultKey=CSPTOOLS-DEPLOYCX3IE-{}&returnUrl=%2Fbrowse%2FCSPTOOLS-DEPLOYCX3IE-{}"
+   restartStopUrl: "http://cs-v-cspcxdev-03.champ.aero:8080/notifier/cancelNotify?method=restart&user={}&buildNum={}"
+   deployStopUrl: "http://cs-v-cspcxdev-03.champ.aero:8080/notifier/cancelNotify?method=deploy&user={}&buildNum={}"
+   #stopRedirectUrl: "http://bamboo.champ.aero:8085/build/admin/stopPlan.action?planResultKey=CSPTOOLS-CX4IE-{}&returnUrl=%2Fbrowse%2FCSPTOOLS-CX4IE-{}"
+   #restartStopUrl: "http://cs-v-cspcxdev-03.champ.aero:8080/cx4-emailer-0.0.2-SNAPSHOT/cancelNotify?method=restart&user={}&buildNum={}"
+   #deployStopUrl: "http://cs-v-cspcxdev-03.champ.aero:8080/cx4-emailer-0.0.2-SNAPSHOT/cancelNotify?method=deploy&user={}&buildNum={}"
    
 messages:
    restartMsg: "I will restart ${team} IE in {}.<br> Let me know if I should wait. :) <br>"
@@ -33,8 +36,9 @@ messages:
    deploySubjectMsg: "${team} IE Deployment"
    
 recipients:
-   sisja: "jaypee.sison@champ.aero"
-   cx4GeneralChat: "c45a90b7.champcargosystems.onmicrosoft.com@emea.teams.ms"
+   test: "426d08d5.champcargosystems.onmicrosoft.com@emea.teams.ms"
+   #sisja: "jaypee.sison@champ.aero"
+   #cx4GeneralChat: "c45a90b7.champcargosystems.onmicrosoft.com@emea.teams.ms"
    
 team: "CX4"
     
