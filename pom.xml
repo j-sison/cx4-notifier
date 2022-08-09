@@ -56,7 +56,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
                     <warName>notifier</warName>
-                    <outputDirectory>.</outputDirectory>
+                    <outputDirectory>..</outputDirectory>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
