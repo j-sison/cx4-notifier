@@ -1,5 +1,6 @@
 # Use three(3) white spaces, tab indentations are not allowed
 users:
+   default: 
    
 urls:
    
