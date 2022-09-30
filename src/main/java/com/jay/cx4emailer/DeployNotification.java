@@ -74,7 +74,15 @@ public class DeployNotification
 	private String buildNum;
 
 	/**  */
+	@Value("${hostName}")
+	private String hostName;
+
+	/**  */
 	private boolean isBuildStopEnabled = true;
+
+	/**  */
+	@Value("${keyPlan}")
+	private String keyPlan;
 
 	/**  */
 	private String method;
