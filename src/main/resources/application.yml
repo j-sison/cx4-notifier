@@ -6,8 +6,8 @@ users:
 urls:
    bambooUrl: "http://bamboo.champ.aero:8085/browse/${keyPlan}"
    stopRedirectUrl: "http://bamboo.champ.aero:8085/build/admin/stopPlan.action?planResultKey=${keyPlan}-{}&returnUrl=%2Fbrowse%2F${keyPlan}-{}"
-   restartStopUrl: "http://${hostName}:8080/notifier/cancelNotify?method=restart&user={}&buildNum={}"
-   deployStopUrl: "http://${hostName}:8080/notifier/cancelNotify?method=deploy&user={}&buildNum={}"
+   restartStopUrl: "http://${hostName}.champ.aero:8080/notifier/cancelNotify?method=restart&user={}&buildNum={}"
+   deployStopUrl: "http://${hostName}.champ.aero:8080/notifier/cancelNotify?method=deploy&user={}&buildNum={}"
    
 # Warning: for messages, avoid modifying any variables, formats or special characters.
 messages:
