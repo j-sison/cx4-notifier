@@ -361,7 +361,7 @@ public class DeployNotification
 		}
 		else if (method.equals("deployDone"))
 		{
-			msg = generateDoneMsg(msgConfig.getMsg(Const.DEPLOY_DONE_MSG), urlConfig.getUrl(Const.BAMBOO_URL));
+			msg = generateDoneMsg(msgConfig.getMsg(Const.DEPLOY_DONE_MSG), urlConfig.getUrl(Const.BAMBOO_URL), buildNum);
 			message.setSubject(msgConfig.getMsg(Const.DEPLOY_SUBJECT));
 			message.setText(msg, Const.UTF, Const.HTML);
 		}
