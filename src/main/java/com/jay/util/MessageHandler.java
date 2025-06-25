@@ -40,6 +40,19 @@ public final class MessageHandler
 	
 	/**
 	 * DOCUMENT ME!
+	 * 
+	 * @param msg
+	 * @param url
+	 * @param buildNum
+	 * @return
+	 */
+	public static String generateDoneMsg(String msg, String url, String buildNum)
+	{
+		return msg.replaceFirst("\\{}", url).replaceFirst("\\{}", url).replaceAll("\\{}", buildNum);
+	}
+	
+	/**
+	 * DOCUMENT ME!
 	 *
 	 * @param   msg
 	 * @param   sleep
