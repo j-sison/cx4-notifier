@@ -14,7 +14,7 @@ messages:
    restartMsg: "I will restart ${team} IE in {}.<br> Let me know if I should wait. :) <br>"
    deployMsg: "I will deploy ${team} IE in {}.<br> Let me know if I should wait. :) <br>"
    restartDoneMsg: "Restart done via <a href={}>{}</a><br> Thank you. :)"
-   deployDoneMsg: "Deploy done via <a href={}>{}</a><br> Thank you. :)"
+   deployDoneMsg: "Deploy done via <a href={}>{}</a><br> Bamboo Build Number:<strong>{}</strong><br> Thank you. :)"
    restartStopMsg: "<a href={}>If you wish to stop the restart, click here<br>"
    deployStopMsg: "<a href={}>If you wish to stop the deployment, click here<br>"
    restartStopDoneMsg: "The restart has been stopped. \r\n"
