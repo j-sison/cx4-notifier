@@ -46,9 +46,9 @@ public final class MessageHandler
 	 * @param buildNum
 	 * @return
 	 */
-	public static String generateDoneMsg(String msg, String url, String buildNum)
+	public static String generateDoneMsg(String msg, String url, String trunkBambooUrl, String trunkBuildNum)
 	{
-		return msg.replaceFirst("\\{}", url).replaceFirst("\\{}", url).replaceAll("\\{}", buildNum);
+		return msg.replaceFirst("\\{}", url).replaceFirst("\\{}", url).replaceFirst("\\{}", trunkBambooUrl).replaceAll("\\{}", trunkBuildNum);
 	}
 	
 	/**
