@@ -72,6 +72,9 @@ public class DeployNotification
 
 	/**  */
 	private String buildNum;
+	
+	/**  */
+	private String trunkBuildNum;
 
 	/**  */
 	@Value("${hostName}")
@@ -132,6 +135,7 @@ public class DeployNotification
 		bambooUser = allParams.get("user");
 		buildNum = allParams.get("buildNum");
 		sleepTime = allParams.get("sleepTime");
+		trunkBuildNum = allParams.get("trunkBuildNum");
 
 		formatUserString();
 		LOGGER.info("isBuildStopEnabled " + isBuildStopEnabled);
@@ -361,7 +365,8 @@ public class DeployNotification
 		}
 		else if (method.equals("deployDone"))
 		{
-			msg = generateDoneMsg(msgConfig.getMsg(Const.DEPLOY_DONE_MSG), urlConfig.getUrl(Const.BAMBOO_URL), buildNum);
+			msg = generateDoneMsg(msgConfig.getMsg(Const.DEPLOY_DONE_MSG), urlConfig.getUrl(Const.BAMBOO_URL),
+					urlConfig.getUrl(Const.TRUNK_BAMBOO_URL), trunkBuildNum);
 			message.setSubject(msgConfig.getMsg(Const.DEPLOY_SUBJECT));
 			message.setText(msg, Const.UTF, Const.HTML);
 		}
