@@ -55,6 +55,9 @@ public final class Const
 
 	/**  */
 	public static final String STOP_REDIRECT_URL = "stopRedirectUrl";
+	
+	/**  */
+	public static final String TRUNK_BAMBOO_URL = "trunkBambooUrl";
 
 	/**  */
 	public static String UTF = "UTF-8";
