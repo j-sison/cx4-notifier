@@ -5,6 +5,7 @@ users:
 # Warning: Do not change url values.
 urls:
    bambooUrl: "http://bamboo.champ.aero:8085/browse/${keyPlan}"
+   trunkBambooUrl: "https://bamboo.champ.aero/browse/CSP-TRUNK-{}"
    stopRedirectUrl: "http://bamboo.champ.aero:8085/build/admin/stopPlan.action?planResultKey=${keyPlan}-{}&returnUrl=%2Fbrowse%2F${keyPlan}-{}"
    restartStopUrl: "http://${hostName}.champ.aero:8080/notifier/cancelNotify?method=restart&user={}&buildNum={}"
    deployStopUrl: "http://${hostName}.champ.aero:8080/notifier/cancelNotify?method=deploy&user={}&buildNum={}"
@@ -14,7 +15,7 @@ messages:
    restartMsg: "I will restart ${team} IE in {}.<br> Let me know if I should wait. :) <br>"
    deployMsg: "I will deploy ${team} IE in {}.<br> Let me know if I should wait. :) <br>"
    restartDoneMsg: "Restart done via <a href={}>{}</a><br> Thank you. :)"
-   deployDoneMsg: "Deploy done via <a href={}>{}</a><br> Bamboo Build Number:<strong>{}</strong><br> Thank you. :)"
+   deployDoneMsg: "Deploy done via <a href={}>{}</a><br> Bamboo Build Number: <a href={}>{}</a><br> Thank you. :)"
    restartStopMsg: "<a href={}>If you wish to stop the restart, click here<br>"
    deployStopMsg: "<a href={}>If you wish to stop the deployment, click here<br>"
    restartStopDoneMsg: "The restart has been stopped. \r\n"
